@@ -1,0 +1,98 @@
+# set PATH so it includes user's private bin if it exists
+if [ -d $HOME/bin ] ; then
+   export PATH=$HOME/bin:$PATH
+fi
+
+# Java variables
+export PATH="$HOME/.jenv/bin:$PATH"
+export JAVA_DIR=/Library/Java/JavaVirtualMachines
+export JAVA_11_BASE=$JAVA_DIR/temurin-11.jdk
+export JAVA_11_HOME=$JAVA_11_BASE/Contents/Home
+export JAVA_17_BASE=$JAVA_DIR/temurin-17.jdk
+export JAVA_17_HOME=$JAVA_17_BASE/Contents/Home
+export JAVA_21_BASE=$JAVA_DIR/temurin-21.jdk
+export JAVA_21_HOME=$JAVA_21_BASE/Contents/Home
+export JAVA_23_BASE=$JAVA_DIR/temurin-23.jdk
+export JAVA_23_HOME=$JAVA_23_BASE/Contents/Home
+export JAVA_BASE=$JAVA_17_BASE
+export JAVA_HOME=$JAVA_BASE/Contents/Home
+export JRE_HOME=$JAVA_BASE/Contents/Home
+export JAVA_OPTS="-Xms1G -Xmx6G -XX:MaxMetaspaceSize=4G -XX:ReservedCodeCacheSize=1G -XX:+UseCompressedOops"
+export PATH=$PATH:$JAVA_HOME/bin
+
+# Anaconda variables
+export ANACONDA_HOME=$HOME/anaconda
+export PATH=$PATH:$ANACONDA_HOME/bin
+
+# Maven variables
+export M2_HOME=$BREW_HOME/opt/maven
+export MAVEN_REPOSITORY=$HOME/.m2
+export PATH=$PATH:$M2_HOME/bin
+
+# Gradle variables
+export GRADLE_HOME=$BREW_HOME/opt/gradle
+export GRADLE_USER_HOME=$HOME/.gradle
+export GRADLE_OPTS=$JAVA_OPTS
+export PATH=$PATH:$GRADLE_HOME/bin
+
+# Ant variables
+export ANT_HOME=$BREW_HOME/opt/ant
+export ANT_OPTS=$JAVA_OPTS
+export PATH=$PATH:$ANT_HOME/bin
+
+# Tomee variables
+export TOMEE_HOME=$HOME/opt/tomee
+export PATH=$PATH:$TOMEE_HOME/bin
+
+# MySQL variables
+export PATH=$PATH:/usr/local/mysql/bin
+
+# ANDROID DEV ENVIRONMENT
+export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
+export ANDROID_HOME=$ANDROID_SDK_ROOT
+export PATH=$PATH:$ANDROID_SDK_ROOT/emulator:$ANDROID_SDK_ROOT/tools:$ANDROID_SDK_ROOT/platform-tools
+
+# ANDROID STUDIO ENVIRONMENT
+export STUDIO_HOME="$HOME/Library/Application Support/Google/AndroidStudio2024.2"
+export STUDIO_VM_OPTIONS=$STUDIO_HOME/studio.vmoptions
+export STUDIO_PROPERTIES=$STUDIO_HOME/idea.properties
+export STUDIO_JDK=$JAVA_HOME
+
+# CarND dev environment
+#export CARND=$HOME/Documents/Personal/School/CarND/term2
+
+# NVIDIA CUDA
+export CUDA_HOME=/usr/local/cuda
+export DYLD_LIBRARY_PATH=/Developer/NVIDIA/CUDA-8.0/lib:$CUDA_HOME/lib
+export PATH=$PATH:$CUDA_HOME/bin
+
+# ROS
+#export PYTHONPATH=/usr/local/lib/python2.7/site-packages:/usr/local/lib/python:$PYTHONPATH
+
+# openldap
+export PATH=/usr/local/opt/openldap/bin:$PATH
+export PATH=/usr/local/opt/openldap/sbin:$PATH
+
+# curl-openssl
+export PATH=/usr/local/opt/curl-openssl/bin:$PATH
+export LDFLAGS="-L/usr/local/opt/curl-openssl/lib"
+export CPPFLAGS="-I/usr/local/opt/curl-openssl/include"
+export PKG_CONFIG_PATH="/usr/local/opt/curl-openssl/lib/pkgconfig"
+
+# NVM
+export NVM_DIR=$HOME/.nvm
+
+# JetBrains Toolbox
+export PATH="$PATH:/Users/justin/Library/Application Support/JetBrains/Toolbox/scripts"
+
+# Brew variables
+export BREW_HOME=/opt/homebrew
+export PATH=$BREW_HOME/bin:$PATH
+
+# SSH 
+#export SSH_AUTH_SOCK=$HOME/.yubiagent/sock
+
+# Volta
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
+

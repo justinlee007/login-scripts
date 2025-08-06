@@ -1,0 +1,11 @@
+# mount the android file image
+function mountAndroid() {
+    hdiutil attach ~/android.dmg.sparseimage -mountpoint /Volumes/android; 
+}
+
+function jdk() {
+    version=$1
+    export JAVA_HOME=$(/usr/libexec/java_home -v"$version");
+    java -version
+}
+
