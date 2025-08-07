@@ -40,10 +40,6 @@ export ANT_HOME=$BREW_HOME/opt/ant
 export ANT_OPTS=$JAVA_OPTS
 export PATH=$PATH:$ANT_HOME/bin
 
-# Tomee variables
-export TOMEE_HOME=$HOME/opt/tomee
-export PATH=$PATH:$TOMEE_HOME/bin
-
 # MySQL variables
 export PATH=$PATH:/usr/local/mysql/bin
 
@@ -57,17 +53,6 @@ export STUDIO_HOME="$HOME/Library/Application Support/Google/AndroidStudio2024.2
 export STUDIO_VM_OPTIONS=$STUDIO_HOME/studio.vmoptions
 export STUDIO_PROPERTIES=$STUDIO_HOME/idea.properties
 export STUDIO_JDK=$JAVA_HOME
-
-# CarND dev environment
-#export CARND=$HOME/Documents/Personal/School/CarND/term2
-
-# NVIDIA CUDA
-export CUDA_HOME=/usr/local/cuda
-export DYLD_LIBRARY_PATH=/Developer/NVIDIA/CUDA-8.0/lib:$CUDA_HOME/lib
-export PATH=$PATH:$CUDA_HOME/bin
-
-# ROS
-#export PYTHONPATH=/usr/local/lib/python2.7/site-packages:/usr/local/lib/python:$PYTHONPATH
 
 # openldap
 export PATH=/usr/local/opt/openldap/bin:$PATH
@@ -88,9 +73,6 @@ export PATH="$PATH:/Users/justin/Library/Application Support/JetBrains/Toolbox/s
 # Brew variables
 export BREW_HOME=/opt/homebrew
 export PATH=$BREW_HOME/bin:$PATH
-
-# SSH 
-#export SSH_AUTH_SOCK=$HOME/.yubiagent/sock
 
 # Volta
 export VOLTA_HOME="$HOME/.volta"
